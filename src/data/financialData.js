@@ -1,0 +1,427 @@
+// Dados simulados inteligentes para seção Financeiro
+export const financialOverview = {
+  totalRevenue: 374300,
+  netRevenue: 318155,
+  totalExpenses: 156200,
+  netProfit: 161955,
+  profitMargin: 43.3,
+  grossMargin: 68.5,
+  cashOnHand: 234500,
+  accountsReceivable: 45600,
+  accountsPayable: 28900,
+  monthlyRecurringRevenue: 87500,
+  customerLifetimeValue: 320,
+  customerAcquisitionCost: 28,
+};
+
+export const revenueByProduct = [
+  {
+    product: 'Curso de Marketing Digital',
+    revenue: 78000,
+    percentage: 20.8,
+    growth: 15.2,
+    margin: 72.5,
+  },
+  {
+    product: 'E-book Vendas Online',
+    revenue: 26700,
+    percentage: 7.1,
+    growth: 8.7,
+    margin: 85.3,
+  },
+  {
+    product: 'Mentoria 1:1',
+    revenue: 46000,
+    percentage: 12.3,
+    growth: 22.1,
+    margin: 65.8,
+  },
+  {
+    product: 'Workshop Instagram',
+    revenue: 20100,
+    percentage: 5.4,
+    growth: -3.2,
+    margin: 58.2,
+  },
+  {
+    product: 'Curso Copywriting',
+    revenue: 22500,
+    percentage: 6.0,
+    growth: 12.8,
+    margin: 70.4,
+  },
+  {
+    product: 'Assinaturas Premium',
+    revenue: 87500,
+    percentage: 23.4,
+    growth: 18.5,
+    margin: 78.2,
+  },
+  {
+    product: 'Outros Produtos',
+    revenue: 93500,
+    percentage: 25.0,
+    growth: 5.3,
+    margin: 62.1,
+  },
+];
+
+export const expensesByCategory = [
+  { category: 'Marketing', amount: 56200, percentage: 36.0, growth: 12.3 },
+  { category: 'Pessoal', amount: 42500, percentage: 27.2, growth: 8.7 },
+  { category: 'Tecnologia', amount: 28900, percentage: 18.5, growth: 15.2 },
+  { category: 'Administrativo', amount: 18600, percentage: 11.9, growth: 3.5 },
+  { category: 'Outros', amount: 10000, percentage: 6.4, growth: -2.1 },
+];
+
+export const monthlyFinancials = [
+  {
+    month: 'Jan',
+    revenue: 234500,
+    expenses: 98700,
+    profit: 135800,
+    margin: 57.9,
+  },
+  {
+    month: 'Fev',
+    revenue: 256800,
+    expenses: 105400,
+    profit: 151400,
+    margin: 59.0,
+  },
+  {
+    month: 'Mar',
+    revenue: 278900,
+    expenses: 112300,
+    profit: 166600,
+    margin: 59.7,
+  },
+  {
+    month: 'Abr',
+    revenue: 298400,
+    expenses: 124500,
+    profit: 173900,
+    margin: 58.3,
+  },
+  {
+    month: 'Mai',
+    revenue: 325600,
+    expenses: 136800,
+    profit: 188800,
+    margin: 58.0,
+  },
+  {
+    month: 'Jun',
+    revenue: 352800,
+    expenses: 148900,
+    profit: 203900,
+    margin: 57.8,
+  },
+  {
+    month: 'Jul',
+    revenue: 374300,
+    expenses: 156200,
+    profit: 218100,
+    margin: 58.3,
+  },
+];
+
+export const cashFlow = [
+  {
+    month: 'Jan',
+    inflow: 245600,
+    outflow: 102300,
+    netFlow: 143300,
+    balance: 143300,
+  },
+  {
+    month: 'Fev',
+    inflow: 267900,
+    outflow: 109800,
+    netFlow: 158100,
+    balance: 301400,
+  },
+  {
+    month: 'Mar',
+    inflow: 289700,
+    outflow: 116500,
+    netFlow: 173200,
+    balance: 474600,
+  },
+  {
+    month: 'Abr',
+    inflow: 310200,
+    outflow: 129300,
+    netFlow: 180900,
+    balance: 655500,
+  },
+  {
+    month: 'Mai',
+    inflow: 338400,
+    outflow: 142100,
+    netFlow: 196300,
+    balance: 851800,
+  },
+  {
+    month: 'Jun',
+    inflow: 366900,
+    outflow: 154800,
+    netFlow: 212100,
+    balance: 1063900,
+  },
+  {
+    month: 'Jul',
+    inflow: 389100,
+    outflow: 162400,
+    netFlow: 226700,
+    balance: 1290600,
+  },
+];
+
+export const revenueByChannel = [
+  {
+    channel: 'Vendas Diretas',
+    revenue: 134520,
+    percentage: 35.9,
+    growth: 18.5,
+  },
+  { channel: 'Afiliados', revenue: 98760, percentage: 26.4, growth: 25.4 },
+  { channel: 'Parcerias', revenue: 76340, percentage: 20.4, growth: 12.3 },
+  { channel: 'Marketplace', revenue: 42180, percentage: 11.3, growth: 8.7 },
+  { channel: 'Outros', revenue: 22500, percentage: 6.0, growth: 5.3 },
+];
+
+export const financialProjections = [
+  {
+    month: 'Ago',
+    revenue: 397800,
+    expenses: 164000,
+    profit: 233800,
+    margin: 58.8,
+  },
+  {
+    month: 'Set',
+    revenue: 422500,
+    expenses: 172200,
+    profit: 250300,
+    margin: 59.2,
+  },
+  {
+    month: 'Out',
+    revenue: 448900,
+    expenses: 180800,
+    profit: 268100,
+    margin: 59.7,
+  },
+  {
+    month: 'Nov',
+    revenue: 476900,
+    expenses: 189800,
+    profit: 287100,
+    margin: 60.2,
+  },
+  {
+    month: 'Dez',
+    revenue: 506500,
+    expenses: 199300,
+    profit: 307200,
+    margin: 60.7,
+  },
+];
+
+export const financialInsights = [
+  {
+    id: 1,
+    type: 'oportunidade',
+    title: 'Otimização de Margem Identificada',
+    description:
+      'Curso de Marketing Digital tem margem 72.5%, mas CAC elevado. Reduzir CAC em 15% pode aumentar margem para 78.2% e gerar +R$ 4.400 em lucro mensal.',
+    confidence: 92,
+    impact: 'Alto',
+    potentialRevenue: 52800,
+    action: 'Otimizar CAC',
+    priority: 'high',
+    category: 'Margem',
+  },
+  {
+    id: 2,
+    type: 'aviso',
+    title: 'Queda de Performance Workshop',
+    description:
+      'Workshop Instagram apresenta queda de 3.2% na receita e margem de apenas 58.2%. Revisar estratégia de preço e conteúdo.',
+    confidence: 88,
+    impact: 'Médio',
+    potentialRevenue: -7200,
+    action: 'Revisar produto',
+    priority: 'medium',
+    category: 'Produto',
+  },
+  {
+    id: 3,
+    type: 'sucesso',
+    title: 'Assinaturas em Alta',
+    description:
+      'Assinaturas Premium cresceram 18.5% e representam 23.4% da receita com margem de 78.2%. Focar em retenção pode aumentar LTV em 25%.',
+    confidence: 95,
+    impact: 'Alto',
+    potentialRevenue: 65600,
+    action: 'Programa retenção',
+    priority: 'high',
+    category: 'Recorrência',
+  },
+  {
+    id: 4,
+    type: 'otimizacao',
+    title: 'Oportunidade em Despesas',
+    description:
+      'Despesas de marketing representam 36% dos custos. Otimizar campanhas pode reduzir em 12% sem impactar vendas, economizando R$ 6.744/mês.',
+    confidence: 84,
+    impact: 'Médio',
+    potentialRevenue: 80928,
+    action: 'Otimizar campanhas',
+    priority: 'medium',
+    category: 'Despesas',
+  },
+];
+
+export const taxSummary = {
+  totalTaxesPaid: 78900,
+  taxRate: 22.5,
+  taxByCategory: [
+    { category: 'Imposto de Renda', amount: 45600, percentage: 57.8 },
+    { category: 'ISS', amount: 18700, percentage: 23.7 },
+    { category: 'PIS/COFINS', amount: 12400, percentage: 15.7 },
+    { category: 'Outros', amount: 2200, percentage: 2.8 },
+  ],
+  taxSavings: 12400,
+  potentialSavings: 8900,
+};
+
+export const invoices = [
+  {
+    id: 1,
+    customer: 'Carlos Silva',
+    email: 'carlos@exemplo.com',
+    amount: 497,
+    status: 'Pago',
+    date: '2025-07-05',
+    dueDate: '2025-07-05',
+    product: 'Curso de Marketing Digital',
+    paymentMethod: 'Cartão de Crédito',
+  },
+  {
+    id: 2,
+    customer: 'Ana Costa',
+    email: 'ana@exemplo.com',
+    amount: 97,
+    status: 'Pago',
+    date: '2025-07-06',
+    dueDate: '2025-07-06',
+    product: 'E-book Vendas Online',
+    paymentMethod: 'PIX',
+  },
+  {
+    id: 3,
+    customer: 'Pedro Santos',
+    email: 'pedro@exemplo.com',
+    amount: 2000,
+    status: 'Pendente',
+    date: '2025-07-08',
+    dueDate: '2025-07-15',
+    product: 'Mentoria 1:1',
+    paymentMethod: 'Boleto',
+  },
+  {
+    id: 4,
+    customer: 'Maria Oliveira',
+    email: 'maria@exemplo.com',
+    amount: 297,
+    status: 'Atrasado',
+    date: '2025-06-25',
+    dueDate: '2025-07-02',
+    product: 'Workshop Instagram',
+    paymentMethod: 'Cartão de Crédito',
+  },
+];
+
+export const subscriptions = [
+  {
+    id: 1,
+    plan: 'Premium Mensal',
+    activeSubscribers: 345,
+    monthlyRevenue: 34500,
+    churnRate: 4.2,
+    avgLifetime: 8.5,
+    growth: 12.3,
+  },
+  {
+    id: 2,
+    plan: 'Premium Anual',
+    activeSubscribers: 234,
+    monthlyRevenue: 19500,
+    churnRate: 1.8,
+    avgLifetime: 14.2,
+    growth: 18.5,
+  },
+  {
+    id: 3,
+    plan: 'Básico Mensal',
+    activeSubscribers: 567,
+    monthlyRevenue: 28350,
+    churnRate: 6.5,
+    avgLifetime: 5.8,
+    growth: 8.7,
+  },
+  {
+    id: 4,
+    plan: 'Básico Anual',
+    activeSubscribers: 123,
+    monthlyRevenue: 5150,
+    churnRate: 2.3,
+    avgLifetime: 11.2,
+    growth: 15.2,
+  },
+];
+
+export const financialGoals = [
+  {
+    id: 1,
+    title: 'Receita Mensal R$ 500k',
+    current: 374300,
+    target: 500000,
+    progress: 74.9,
+    deadline: '31/12/2025',
+    status: 'on-track',
+    description: 'Meta de crescimento de receita',
+  },
+  {
+    id: 2,
+    title: 'Margem Líquida 45%',
+    current: 43.3,
+    target: 45.0,
+    progress: 96.2,
+    deadline: '30/09/2025',
+    status: 'on-track',
+    description: 'Meta de lucratividade',
+  },
+  {
+    id: 3,
+    title: 'MRR R$ 100k',
+    current: 87500,
+    target: 100000,
+    progress: 87.5,
+    deadline: '31/10/2025',
+    status: 'on-track',
+    description: 'Meta de receita recorrente mensal',
+  },
+  {
+    id: 4,
+    title: 'Reduzir CAC para R$ 25',
+    current: 28,
+    target: 25,
+    progress: 89.3,
+    deadline: '30/11/2025',
+    status: 'at-risk',
+    description: 'Meta de eficiência de aquisição',
+  },
+];

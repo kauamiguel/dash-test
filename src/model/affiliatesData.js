@@ -1,0 +1,138 @@
+export const affiliatesDataTemplate = {
+  affiliatesOverview: {
+    totalAffiliates: 0,
+    activeAffiliates: 0,
+    pendingAffiliates: 0,
+    blockedAffiliates: 0,
+    totalCommissions: 0,
+    paidCommissions: 0,
+    pendingCommissions: 0,
+    avgCommissionRate: 0,
+    totalSales: 0,
+    affiliateRevenue: 0,
+  },
+  topAffiliates: [
+    {
+      id: 0,
+      name: '',
+      email: '',
+      avatar: '',
+      status: '',
+      joinDate: '',
+      tier: '',
+      sales: 0,
+      revenue: 0,
+      commission: 0,
+      commissionRate: 0,
+      conversionRate: 0,
+      clicks: 0,
+      growth: 0,
+      lastSale: '',
+      totalEarnings: 0,
+      rank: 0,
+    },
+  ],
+  affiliatesByTier: [
+    {
+      tier: '',
+      count: 0,
+      minSales: 0,
+      commissionRate: 0,
+      color: '',
+    },
+  ],
+  affiliatePerformanceData: [
+    {
+      month: '',
+      affiliates: 0,
+      sales: 0,
+      commissions: 0,
+      revenue: 0,
+    },
+  ],
+  commissionStructure: [
+    {
+      product: '',
+      baseCommission: 0,
+      tierBonus: {
+        Bronze: 0,
+        Silver: 0,
+        Gold: 0,
+        Diamond: 0,
+      },
+      volumeBonus: [
+        {
+          minSales: 0,
+          bonus: 0,
+        },
+      ],
+    },
+  ],
+  affiliateInsights: [
+    {
+      id: 0,
+      type: '',
+      title: '',
+      description: '',
+      confidence: 0,
+      impact: '',
+      potentialRevenue: 0,
+      action: '',
+      priority: '',
+      affiliate: '',
+    },
+  ],
+  paymentHistory: [
+    {
+      id: 0,
+      affiliate: '',
+      amount: 0,
+      period: '',
+      status: '',
+      paidDate: '',
+      method: '',
+      sales: 0,
+      commission: 0,
+    },
+  ],
+  affiliateGoals: [
+    {
+      id: 0,
+      title: '',
+      current: 0,
+      target: 0,
+      progress: 0,
+      deadline: '',
+      status: '',
+      description: '',
+    },
+  ],
+  trafficSources: [
+    {
+      source: '',
+      affiliates: 0,
+      sales: 0,
+      revenue: 0,
+      percentage: 0,
+    },
+  ],
+  conversionFunnel: [
+    {
+      stage: '',
+      count: 0,
+      percentage: 0,
+    },
+  ],
+  recentActivity: [
+    {
+      id: 0,
+      type: '',
+      affiliate: '',
+      action: '',
+      product: '',
+      amount: 0,
+      commission: 0,
+      timestamp: '',
+    },
+  ],
+};

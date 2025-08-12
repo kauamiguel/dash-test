@@ -1,0 +1,493 @@
+@import "tailwindcss";
+
+/* Cores Oficiais da GoExplosion */
+:root {
+  /* Cores Principais */
+  --background: #0F0F23;        /* Azul escuro quase preto */
+  --foreground: #FFFFFF;        /* Branco puro */
+  --primary: #DC2626;           /* Vermelho vibrante (cor oficial) */
+  --primary-dark: #B91C1C;      /* Vermelho mais escuro */
+  --primary-foreground: #FFFFFF; /* Texto sobre primário */
+  
+  /* Cores Secundárias */
+  --secondary: #7C3AED;         /* Roxo/violeta (cor secundária oficial) */
+  --secondary-dark: #5B21B6;    /* Roxo mais escuro */
+  --secondary-foreground: #FFFFFF;
+  
+  /* Cores de Interface */
+  --card: #1A1A2E;             /* Azul escuro para cards */
+  --card-foreground: #FFFFFF;
+  --popover: #1A1A2E;
+  --popover-foreground: #FFFFFF;
+  
+  /* Cores de Estado */
+  --muted: #374151;            /* Cinza médio */
+  --muted-foreground: #9CA3AF; /* Cinza claro */
+  --accent: #DC2626;           /* Vermelho para acentos */
+  --accent-foreground: #FFFFFF;
+  
+  /* Bordas e Inputs */
+  --border: #374151;           /* Cinza para bordas */
+  --input: #374151;            /* Fundo de inputs */
+  --ring: #DC2626;             /* Cor do focus ring */
+  
+  /* Cores de Status */
+  --success: #10B981;          /* Verde para sucesso */
+  --warning: #F59E0B;          /* Amarelo para avisos */
+  --destructive: #EF4444;      /* Vermelho para erros */
+  --info: #3B82F6;             /* Azul para informações */
+  
+  /* Sidebar */
+  --sidebar: #16213E;          /* Azul mais escuro para sidebar */
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-border: #374151;
+  --sidebar-accent: #DC2626;   /* Vermelho para item ativo */
+  --sidebar-accent-foreground: #FFFFFF;
+  
+  /* Radius */
+  --radius: 0.5rem;
+}
+
+/* Aplicação das cores */
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Gradiente oficial da GoExplosion */
+.goexplosion-gradient {
+  background: linear-gradient(135deg, #DC2626 0%, #7C3AED 100%);
+}
+
+/* Gradiente para texto */
+.goexplosion-text-gradient {
+  background: linear-gradient(135deg, #DC2626 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* KPI Cards com tema oficial */
+.kpi-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #DC2626, #7C3AED);
+}
+
+.kpi-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.15);
+}
+
+/* Sparklines com cores oficiais */
+.sparkline-container {
+  height: 40px;
+  margin-top: 8px;
+}
+
+/* Sidebar com tema oficial */
+.sidebar {
+  background: var(--sidebar);
+  border-right: 1px solid var(--sidebar-border);
+}
+
+.sidebar-item {
+  color: var(--sidebar-foreground);
+  transition: all 0.2s ease;
+}
+
+.sidebar-item:hover {
+  background: rgba(220, 38, 38, 0.1);
+  color: var(--primary);
+}
+
+.sidebar-item.active {
+  background: var(--sidebar-accent);
+  color: var(--sidebar-accent-foreground);
+}
+
+/* Botões com tema oficial */
+.btn-primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: 1px solid var(--primary);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+  border: 1px solid var(--secondary);
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-dark);
+  border-color: var(--secondary-dark);
+}
+
+/* Badges com cores oficiais */
+.badge-primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.badge-secondary {
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.badge-success {
+  background: var(--success);
+  color: white;
+}
+
+.badge-warning {
+  background: var(--warning);
+  color: white;
+}
+
+.badge-error {
+  background: var(--destructive);
+  color: white;
+}
+
+/* Gráficos com cores oficiais */
+.recharts-cartesian-grid line {
+  stroke: var(--border);
+}
+
+.recharts-text {
+  fill: var(--muted-foreground);
+}
+
+/* Melhorias de responsividade e design */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .kpi-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animações suaves */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Hover effects melhorados */
+.interactive-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interactive-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(220, 38, 38, 0.1);
+}
+
+/* Loading states */
+.skeleton {
+  background: linear-gradient(90deg, #374151 25%, #4B5563 50%, #374151 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Scrollbar customizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Melhorias nos tooltips */
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card);
+  color: var(--foreground);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  border: 1px solid var(--border);
+  z-index: 1000;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+/* Melhorias nos badges */
+.badge-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Estados de foco melhorados */
+.focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+/* Gradientes adicionais com cores oficiais */
+.success-gradient {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+}
+
+.warning-gradient {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+}
+
+.error-gradient {
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+}
+
+.info-gradient {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+}
+
+/* Melhorias nos gráficos */
+.chart-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.chart-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  opacity: 0.5;
+}
+
+/* Estados de loading para cards */
+.card-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.1), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Melhorias na tipografia */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Efeitos de glassmorphism */
+.glass-effect {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Melhorias nos botões */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-glow:hover::before {
+  left: 100%;
+}
+
+/* Melhorias nos indicadores de status */
+.status-indicator {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-indicator.online {
+  background: var(--primary);
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+}
+
+.status-indicator.offline {
+  background: var(--muted);
+}
+
+.status-indicator.warning {
+  background: var(--warning);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+/* Melhorias na navegação */
+.nav-item {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--primary);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-item.active::before,
+.nav-item:hover::before {
+  transform: scaleY(1);
+}
+
+/* Melhorias nos cards de métricas */
+.metric-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.1) 0%, transparent 70%);
+  transform: translate(30px, -30px);
+}
+
+/* Animações de entrada */
+.animate-in {
+  animation: animateIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes animateIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
